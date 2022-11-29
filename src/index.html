@@ -13,14 +13,230 @@
     <link rel="stylesheet" href="./css/home.css" />
 
     <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
 
     <!-- FONT AWESOME ICONS CDN -->
+    <script src="https://kit.fontawesome.com/a35b8b496f.js" crossorigin="anonymous"></script>
 
     <!-- TAB ICON -->
     <link rel="icon" type="image/x-icon" href="#" />
+
     <title>Philantrofund</title>
 </head>
+<!-- HOME VIEW -->
 <body>
+<div class="parallax-wrapper">
+
+
+    <!-- HEADER CONTENT -->
+    <header>
+        <div class="bg-polygon"></div>
+        
+        <nav>
+            <!-- LOGO -->
+            <div class="logo-container">
+                <p>PF</p>
+            </div>
     
+            <!-- SEARCH INPUT -->
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" name="search" id="search-input" placeholder="Search" />
+            </div>
+    
+            <!-- BURGER MENU | ONCLICK DISPLAY NAVIGATION ABSOLUTE-->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+                <!-- <i class="fas fa-times hidden"></i> -->
+            </div>
+        </nav>
+
+        <!-- NAVIGATION ABSOLUTE PANEL MOBILE HIDDEN | GRID CONTAINER -->
+        <aside id="aside-nav" class="mobile-aside"> 
+
+            <input type="search" name="search-nav" id="search-nav" placeholder="Search project, category, idea, information..." />
+
+            <!-- NAVIGATION LINKS -->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Pircing</a></li>
+                    <li><a href="#">Objectives</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </nav>
+            <button id="aside-bttn-1" type="button"><a href="#">Start fundrising</a></button>
+            <button id="aside-bttn-2" type="button"><a href="#">Sing In</a></button>
+            <button id="aside-bttn-3" type="button"><a href="#">Sing Up</a></button>
+
+            <!-- SOCIAL MEDIA -->
+            <section class="social-media">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </section>
+        </aside>
+
+        <div class="hero-grid-container">
+
+            <!-- BIG HERO CONTAINER -->
+            <section class="big-hero-container">
+                <!-- MAIN TITLE & TYPED JS -->
+                <article class="title-container">
+                    <h1>Collaborate with everyone to support education</h1>
+                </article>
+        
+                <div class="illustration-box">
+                    <img src="./assets/svg/world.svg" alt="world-illustration">
+                </div>
+        
+                <article class="waves-box">
+                    <!-- POSITION ABSOLUTE & Z-INDEX 1-8 -->
+                    <img src="./assets/images/Wave-8.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-7.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-6.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-5.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-4.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-3.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-2.png" alt="wave-img" class="wave">
+                    <img src="./assets/images/Wave-1.png" alt="wave-img" class="wave">
+                </article>
+            </section>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- FUNDRISING STEPS / GRID CONTAINER -->
+        <section class="fundrising-steps">
+            <h2>Fundrising in easy steps</h2>
+            <figure>
+                <img src="#" alt="illustration-1">
+                <figcaption>1. Define your project and funding target</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="illustration-2">
+                <figcaption>2. Get support from colleagues and family members</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="illustration-3">
+                <figcaption>3. Submit for review by the Philanthrofund  team.</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="illustration-4">
+                <figcaption>4. Communicate tour project to the world.</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="illustration-5">
+                <figcaption>5. Reach the target and receive the funds.</figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="illustration-6">
+                <figcaption>6. Share the experience with the partners.</figcaption>
+            </figure>
+
+            <button type="button"><a href="#">Start fundrising</a></button>
+        </section>
+
+        <section class="leading-projects">
+            <!-- FLEX CONTAINER -->
+            <article class="card-box">
+                <!-- IMAGES N TAGS -->
+                <div class="image-tags">
+                    <img src="#" alt="project-image">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <div class="category-tag">
+                        <p>Health</p>
+                    </div>
+                </div>
+                <!-- DESCRIPTION N STATUS -->
+                <div class="project-info">
+                    <h3>Tanzania's future</h3>
+                    <p>After spending 6 weeks volunteering in a Tanzanian school and visiting few...</p>
+                    <div class="project-status">
+                        <!-- PROFILE IMAGE - HIDDEN ON MOBILE -->
+                        <div class="usr-img-box hidden">
+                            <img src="#" alt="user-profile-image">
+                        </div>
+                        <h4>Maria Dinares Verdaguer</h4>
+                        <!-- STATS -->
+                        <div class="progress-bar-box">
+                            <div class="progress-bar">...</div>
+                        </div>
+                        <!-- GRID-CONTAINER -->
+                        <details class="nums">
+                            <p id="funded">80 %</p>
+                            <p id="goal">8.000 €</p>
+                            <p id="days-left">28</p>
+                            <p>Funded</p>
+                            <p>Goal</p>
+                            <p>Days left</p>
+                        </details>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <p>"Philantropist is an individual who is characterised by love for other people and their works for the common good without receiving anything in return."</p>
+        </section>
+
+        <!-- CATEGORIES TAGS / GRID-CONTAINER -->
+        <section class="categories-tags">
+            <h3>Discover by categories</h3>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Health</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Environment</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Community</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Family</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>School</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Sports</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Arts</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Events</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Travel</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Personal</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Volunteer</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>In Memoriam</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Category</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>ONG</a></div>
+            <div class="category-box"><a href="#"><i class="fa-regular fa-cube"></i>Animals</a></div>
+        </section>
+    </main>
+
+    <!-- FOOTER CONTENT -->
+    <footer>
+        <section class="logo-media">
+            <img src="#" alt="Logotype">
+            <!-- FLEX CONTAINER -->
+            <div class="social-media">
+                <a href="https://github.com/4Heber"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </section>
+
+        <section class="options-links">
+            <article>
+                <div class="language">
+                    <p>Language: <span id="selected-lan">English (United States)</span></p>
+                </div>
+                <div class="currency">
+                    <p>Currency: <span id="selected-cur">EUR</span></p>
+                </div>
+                <div class="location">
+                    <p id="selected-loca"><i class="fa-regular fa-location-dot"></i>Spain</p> 
+                </div>
+            </article>
+        </section>
+    </footer>
+</div>
+
+<!-- SCRIPTS -->
+<script src="./js/index.js"></script>
 </body>
 </html>

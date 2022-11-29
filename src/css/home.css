@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, Calibri, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --t-value: 100% ;
+}
+
+@font-face {
+  font-family: Black-sword;
+  src: url(../assets/fonts/Blacksword.otf);
+}
+header {
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
+  /* Polygon */
+}
+header nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 4rem;
+}
+header nav .logo-container {
+  font-family: Calibri, Montserrat;
+}
+header nav .logo-container p {
+  font-size: 2rem;
+  color: #ececec;
+  font-weight: 800;
+}
+header nav .search-container {
+  position: relative;
+  height: 20px;
+}
+header nav .search-container i {
+  position: absolute;
+  bottom: 1px;
+  left: 4px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: #6d6d6d;
+}
+header nav .search-container input {
+  height: 100%;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+}
+header nav .burger-menu {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+header nav .burger-menu i {
+  font-size: 24px;
+  color: #ececec;
+  cursor: pointer;
+  transition: all ease-in 150ms;
+}
+header nav .burger-menu:hover i {
+  color: #986af9;
+}
+header .bg-polygon {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  z-index: -100;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(-45deg, #2e29a6, #0a0926);
+}
+header .hero-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+header .big-hero-container {
+  position: relative;
+  grid-column: 1/7;
+  min-height: 700px;
+}
+header .big-hero-container .title-container h1 {
+  margin: 0 2rem;
+  font-family: Calibri;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: rgb(226, 226, 226);
+  margin-bottom: 4rem;
+}
+header .big-hero-container .illustration-box {
+  margin: 0 2rem;
+}
+header .big-hero-container .illustration-box img {
+  width: 100%;
+}
+header .big-hero-container .waves-box {
+  position: absolute;
+  bottom: 24rem;
+  width: 100%;
+}
+header .big-hero-container .waves-box img {
+  position: absolute;
+  width: 100%;
+}
+header .mobile-aside {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  padding: 0 2rem;
+  z-index: 100;
+  margin-left: 100%;
+  transition: all ease-in-out 200ms;
+}
+header .mobile-aside #search-nav {
+  grid-column: 1/7;
+  height: 32px;
+  border-radius: 6px;
+  outline: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  text-align: center;
+}
+header .mobile-aside .nav-links {
+  grid-column: 1/7;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 22rem;
+  margin-top: 2rem;
+}
+header .mobile-aside .nav-links ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+header .mobile-aside .nav-links ul li a {
+  color: #ececec;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 800;
+}
+header .mobile-aside button {
+  height: 34px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #986af9;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all ease-in 150ms;
+}
+header .mobile-aside button a {
+  color: #0a0926;
+  text-decoration: none;
+  font-weight: 900;
+  color: #ececec;
+}
+header .mobile-aside #aside-bttn-1 {
+  grid-column: 1/7;
+  background-color: #986af9;
+}
+header .mobile-aside #aside-bttn-1 a {
+  letter-spacing: 1px;
+}
+header .mobile-aside #aside-bttn-2 {
+  grid-column: 1/4;
+  margin-right: 1rem;
+  background-color: #986af9;
+}
+header .mobile-aside #aside-bttn-3 {
+  grid-column: 4/7;
+  margin-left: 1rem;
+  border: 2px solid #986af9;
+  background-color: transparent;
+}
+header .mobile-aside #aside-bttn-1:active,
+header .mobile-aside #aside-bttn-2:active {
+  background-color: transparent;
+}
+header .mobile-aside #aside-bttn-3:active {
+  background-color: #986af9;
+}
+header .mobile-aside .social-media {
+  grid-column: 1/7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+}
+header .mobile-aside .social-media a i {
+  font-size: 2rem;
+}
+header .hidden {
+  display: none;
+}
+
+main {
+  display: grid;
+  margin: 0 1rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.fundrising-steps {
+  grid-column: 1/7;
+}
+
+.leading-projects {
+  grid-column: 1/7;
+}
+
+.banner {
+  grid-column: 1/7;
+}
+
+.categories-tags {
+  grid-column: 1/7;
+}
+
+/*# sourceMappingURL=home.css.map */
