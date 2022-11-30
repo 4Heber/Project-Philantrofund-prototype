@@ -1,3 +1,4 @@
+// cd \Users\PARZIVAL\Documents\DAW-2\DIW - Diseño Interfaces Web\P2-Repository\Project-Philantrofund-prototype\src\
 // sass --watch ./scss/style.scss ./css/home.css
 
 *{
@@ -18,7 +19,7 @@
 //Colors
 $primary: #2e29a6;
 $primary-variant: #986af9;
-$primary-dark: #0a0926;
+$primary-dark: #0c0b26;
 $secondary: #0bd9d9;
 $secondary-variant: #00a7a8;
 $error: #8b0020;
@@ -40,8 +41,14 @@ $details-txt-size: 12px;
 $details-txt-font: Calibri;
 
 //Shadows
-$shadow-bttn:rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
- rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$shadow-bttn:
+0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+0 12.5px 10px rgba(0, 0, 0, 0.06),
+0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+0 100px 80px rgba(0, 0, 0, 0.12)
+;
 
 //Logotype
 @font-face{
@@ -51,7 +58,7 @@ $shadow-bttn:rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
 
 
 header{
-    height: 100vh;
+    height: 86vh;
     position: relative;
     
     background-color: transparent;
@@ -132,14 +139,20 @@ header{
 
     .hero-grid-container{
         display: grid;
-        // margin: 0 2rem;
         grid-template-columns: repeat(6, 1fr);
+        height: 90%;
     }
 
     .big-hero-container{
         position: relative;
         grid-column: 1/7;
-        min-height: 700px;
+        // min-height: 700px;
+
+        .title-container,
+        .illustration-box{
+            transition: all ease-in-out 200ms;
+            opacity: 1;
+        }
     
         .title-container h1{
             margin: 0 2rem;
@@ -151,27 +164,45 @@ header{
         }
     
         .illustration-box{
-            margin: 0 2rem;
+            padding: 0 2rem;
 
-            img{
+            svg{
                 width: 100%;
+                height: auto;
             }
         }
 
         .waves-box{
             position: absolute;
-            bottom: 24rem;            
+            bottom: 0;            
             width: 100%;
+            height: 33%;
 
             img{
                 position: absolute;
                 width: 100%;
+                height: 100%;
+            }
+
+            :nth-child(1){
+                transform: translateY(-5rem);
+            }
+            :nth-child(2){
+                // transform: translateY(-2.4rem);
+            }
+            :nth-child(9){
+                height: 35px;
+                bottom: 0;
+                transform: translateY(2rem);
             }
         }
 
     }
 
     //Aside mobile navbar
+    .slide-in{ margin-left: 0; opacity: 1; }
+    .slide-out{ margin-left: 100%; opacity: 0; }
+
     .mobile-aside{
         position: absolute;
         width: 100%;
@@ -182,8 +213,8 @@ header{
         z-index: 100;
 
         //Slide out (hidden)
-        margin-left: 100%;
         transition: all ease-in-out 200ms;
+        transition: opacity ease-in 300ms;
 
         #search-nav{
             grid-column: 1/7;
@@ -286,6 +317,7 @@ header{
 
     .hidden{
         display: none;
+        opacity: 0;
     }
 }
 
@@ -294,19 +326,164 @@ header{
 //Main content
 main{
     display: grid;
-    margin: 0 1rem;
+    padding: 0 1rem;
     grid-template-columns: repeat(6, 1fr);
 }
 
-
-
+// Fundrising steps / display grid
 
 .fundrising-steps{
     grid-column: 1/7;
+    width: 100%;
+    padding-top: 6rem;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    h2{
+        grid-column: 1/-1;
+        font-family: $h2-font;
+        font-size: $h2-size;
+        color: $primary-dark;
+        text-align: center;
+    }
+
+    figure{
+        position: relative;
+        padding: 1rem;
+        border-radius: 6px;
+        overflow: hidden;
+        background: linear-gradient(to bottom left, #c7c7c7, #e3e3e3);
+
+        svg{
+            position: relative;
+            width: 100%;
+            height: 164px;
+            z-index: 1;
+        }
+        p{
+            position: absolute;
+            font-size: 8rem;
+            font-weight: 900;
+            color: #c7c7c7;
+            top: 11rem;
+            left: -1rem;
+            z-index: 0;
+        }
+
+        figcaption{
+            position: relative;
+            text-align: justify;
+            font-weight: 800;
+            color: $primary-dark;
+            z-index: 1;
+        }
+    }
+    
+    :nth-child(2),
+    :nth-child(4),
+    :nth-child(6){
+        grid-column: 1/3;
+    }
+    :nth-child(3),
+    :nth-child(5),
+    :nth-child(7){
+        grid-column: 3/-1;
+    }
+    
+
+    button{
+        grid-column: 1/-1;
+        margin: 2rem 0;
+        padding: 1rem;
+        border: none;
+        background: linear-gradient(-90deg,$primary,$primary-variant);
+        border-radius: 6px;
+        box-shadow: $shadow-bttn;
+        cursor: pointer;
+        transition: all ease-in 150ms;
+        opacity: 1;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+
 }
 
 .leading-projects{
     grid-column: 1/7;
+
+    position: relative;
+
+    h2{
+        font-size: $h2-size;
+        font-family: $h2-font;
+        color: $primary-dark;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .card-box{
+        display: flex;
+        flex-flow: row nowrap;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        background: linear-gradient(to bottom left, #c7c7c7, #e3e3e3);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        transition: all ease-in 200ms;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-tags{
+            position: relative;
+            width: 40%;
+            margin-right: 1rem;
+            box-shadow: inset 0rem 2rem 1rem rgba(0, 0, 0, 0.4);
+            
+            img{
+                width: 100%;
+                height: 100%;
+                max-height: 122px;
+                object-fit: cover;
+            }
+            
+            i{
+                position: absolute;
+                top: .6rem;
+                left: .6rem;
+                color: #fff;
+            }
+            
+            .category-tag{
+                position: absolute;
+                top: .4rem;
+                left: 2rem;
+                // border: 1px solid $primary-dark;
+                background-color: $primary;
+                border-radius: 6px;
+                padding: 2px 4px;
+                color: $light-text;
+            }
+        }
+
+        .project-info{
+            width: 60%;
+        }
+
+    }
 }
 
 .banner{

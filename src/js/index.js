@@ -26,11 +26,14 @@ const svgHero = document.getElementsByClassName('illustration-box');
 menuBttn[0].addEventListener('click', () => {
 
     // Change menu icon
-    if(asideNav.classList.contains('hidden')){
+    if(asideNav.classList.contains('slide-out')){
         iconBttn.classList.replace('fa-bars', 'fa-times');
+        asideNav.classList.replace('slide-out','slide-in');
+
     }
     else{
         iconBttn.classList.replace('fa-times', 'fa-bars');
+        asideNav.classList.replace('slide-in', 'slide-out');
     }
     
     // fadeOut();
@@ -38,18 +41,4 @@ menuBttn[0].addEventListener('click', () => {
     // Hidden title & illustration
     h1Hero[0].classList.toggle('hidden');
     svgHero[0].classList.toggle('hidden');
-    
-    asideNav.style.setProperty('margin-left','0');
-    asideNav.style.setProperty('margin-left','100%');
-
-    var rs = getComputedStyle(asideNav);
-
-    if(rs.getPropertyValue('margin-left') == '100%'){
-        
-    }
-    // asideNav.classList.toggle('hidden');
-    console.log(getComputedStyle(asideNav,'margin-left'));
-    
-
-
 })
