@@ -328,6 +328,7 @@ main{
     display: grid;
     padding: 0 1rem;
     grid-template-columns: repeat(6, 1fr);
+    background-color: #fff;
 }
 
 // Fundrising steps / display grid
@@ -355,7 +356,7 @@ main{
         padding: 1rem;
         border-radius: 6px;
         overflow: hidden;
-        background: linear-gradient(to bottom left, #c7c7c7, #e3e3e3);
+        background: linear-gradient(to bottom left, #c7c7c7, #fff);
 
         svg{
             position: relative;
@@ -436,12 +437,14 @@ main{
     .card-box{
         display: flex;
         flex-flow: row nowrap;
+        height: 184px;
         border-radius: 6px;
         margin-bottom: 2rem;
         overflow: hidden;
-        background: linear-gradient(to bottom left, #c7c7c7, #e3e3e3);
+        background: linear-gradient(to bottom left, #c7c7c7, #fff);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         transition: all ease-in 200ms;
+        cursor: pointer;
         
         &:hover {
             transform: scale(1.02);
@@ -456,7 +459,7 @@ main{
             img{
                 width: 100%;
                 height: 100%;
-                max-height: 122px;
+                
                 object-fit: cover;
             }
             
@@ -465,22 +468,90 @@ main{
                 top: .6rem;
                 left: .6rem;
                 color: #fff;
+                font-size: 1.4rem;
             }
             
             .category-tag{
                 position: absolute;
                 top: .4rem;
-                left: 2rem;
-                // border: 1px solid $primary-dark;
-                background-color: $primary;
+                left: 2.5rem;
+                border: 1px solid #fff;
+                // background-color: $primary;
                 border-radius: 6px;
                 padding: 2px 4px;
-                color: $light-text;
+                color: #fff;
+                font-weight: 800;
             }
         }
 
         .project-info{
             width: 60%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            padding: 1rem 1rem 1rem 0;
+
+            h3{
+                margin-bottom: .5rem;
+            }
+
+            .description{
+                width: 203px;
+                justify-self: flex-start;
+                margin-bottom: .5rem;
+                line-height: normal;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+            }
+
+            .project-status{
+                width: 100%;
+
+                .usr-img-box{
+
+                }
+
+                h4{
+                    margin-bottom: 1rem;
+                }
+
+                .progress-bar-box{
+                    width: 100%;
+                    height: 8px;
+                    border-radius: 6px;
+                    background-color: #fff;
+                    margin-bottom: 0.4rem;
+
+                    .progress-bar{
+                        // Total progess 
+                        width: 80%;
+                        height: 8px;
+                        border-radius: 6px;
+                        background-color: $primary;
+                    }
+                }
+
+                .nums{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 2;
+
+                    p[id]{
+                        font-weight: 800;
+                    }
+
+                    :nth-child(2),
+                    :nth-child(5){
+                        text-align: center;
+                    }
+                    :nth-child(3),
+                    :nth-child(6){
+                        text-align: end;
+                    }
+                }
+            }
         }
 
     }
@@ -488,8 +559,42 @@ main{
 
 .banner{
     grid-column: 1/7;
+    
+    width: 100%;
+    margin: 4rem 0 2rem;
+    height: 208px;
+    overflow: hidden;
+    
+    .banner-bg{
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        background: url(../assets/images/banner/image-2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        filter: blur(2px);
+    }
+
+    p{
+        position: absolute;
+        width: 100%;
+        padding: 1.5rem;
+
+        font-family: $h2-font;
+        font-style: italic;
+        font-size: 2rem;
+        text-align: center;
+        color: #fff;
+        background: transparent;
+        z-index: 2;
+    }
 }
 
 .categories-tags{
     grid-column: 1/7;
+
+    
 }
