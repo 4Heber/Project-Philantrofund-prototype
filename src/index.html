@@ -20,6 +20,12 @@
     <!-- FONT AWESOME ICONS CDN -->
     <script src="https://kit.fontawesome.com/a35b8b496f.js" crossorigin="anonymous"></script>
 
+    <!-- SCRIPTS -->
+    <script defer src="./js/index.js"></script>
+    <!-- TYPED.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script defer src="./js/typed.js-master/lib/typed.js"></script>
+
     <!-- TAB ICON -->
     <link rel="icon" type="image/x-icon" href="#" />
 
@@ -29,7 +35,7 @@
 <body>
 <div class="parallax-wrapper">
 
-
+    
     <!-- HEADER CONTENT -->
     <header>
         <div class="bg-polygon"></div>
@@ -37,7 +43,7 @@
         <nav>
             <!-- LOGO -->
             <div class="logo-container">
-                <p>PF</p>
+                <img src="./assets/images/logotype.png" alt="philantrofund logotype">
             </div>
     
             <!-- SEARCH INPUT -->
@@ -47,9 +53,11 @@
             </div>
     
             <!-- BURGER MENU | ONCLICK DISPLAY NAVIGATION ABSOLUTE-->
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-                <!-- <i class="fas fa-times hidden"></i> -->
+            <div id="burger-menu">
+                <!-- <i class="fas fa-bars"></i> -->
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
             </div>
         </nav>
 
@@ -85,11 +93,28 @@
 
             <!-- BIG HERO CONTAINER -->
             <section class="big-hero-container">
+                
                 <!-- MAIN TITLE & TYPED JS -->
                 <article class="title-container">
-                    <h1>Collaborate with everyone to support education</h1>
+                    <h1 class="title">
+                        <span class="typed"></span>
+                    </h1>
                 </article>
-        
+
+                <div class="title" id="typed-strings">
+                    <p>Collaborate with everyone to <br>support <i class="category">Schools</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Health</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Enviroment</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Community</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Families</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Sports</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Arts</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Events</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Volunteers</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">ONGs</i></p>
+                    <p>Collaborate with everyone to <br>support <i class="category">Animals</i></p>
+                </div>
+
                 <div class="illustration-box">
                     <svg viewBox="0 0 826 592" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_2)">
@@ -171,6 +196,9 @@
             </section>
         </div>
     </header>
+
+    <!-- GO TOP BUTTON -->
+    <button onclick="goTopFunction()" id="goTopBttn" title="Go top button"><i class="fas fa-chevron-up"></i></button>
 
     <!-- MAIN CONTENT -->
     <main>
@@ -823,83 +851,115 @@
     <section class="categories-tags">
         <h3>Discover by categories</h3>
 
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Health</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Environment</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Community</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Family</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>School</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Sports</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Arts</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Events</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Travel</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Personal</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Volunteer</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>In Memoriam</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Category</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>ONG</a>
-        </div>
-        <div class="category-box">
-            <a href="#"><i class="fa-regular fa-cube"></i>Animals</a>
-        </div>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Health
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Enviroment
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Community
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Family
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>School
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Sports
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Arts
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Events
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Travel
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Personal
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Volunteer
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>In Memoriam
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>ONG
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Animals
+        </a>
+        <a href="#" class="category-box">
+            <i class="fas fa-cube"></i>Category
+        </a>
+        
     </section>
 
     <!-- FOOTER CONTENT -->
     <footer>
+        <!-- LOGOTYPE & SOCIAL MEDIA ICONS -->
         <section class="logo-media">
-            <img src="#" alt="Logotype">
+            <img src="./assets/images/logotype-full.png" alt="philantrofund logotype">
+
             <!-- FLEX CONTAINER -->
             <div class="social-media">
-                <a href="https://github.com/4Heber"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/4Heber"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
 
+        <!-- GENERAL CONFIGURATION LINKS -->
         <section class="options-links">
-            <article>
-                <div class="language">
-                    <p>Language: <span id="selected-lan">English (United States)</span></p>
-                </div>
-                <div class="currency">
-                    <p>Currency: <span id="selected-cur">EUR</span></p>
-                </div>
-                <div class="location">
-                    <p id="selected-loca"><i class="fa-regular fa-location-dot"></i>Spain</p> 
-                </div>
-            </article>
+            <div class="language">
+                <p>Language: <span id="selected-lan">English (United States)</span></p>
+            </div>
+            <div class="currency">
+                <p>Currency: <span id="selected-cur">EUR</span></p>
+            </div>
+            <div class="location">
+                <p id="selected-location"><i class="fab fa-location-dot"></i>Spain</p> 
+            </div>
+        </section>
+
+        <!-- ABOUT US LINKS -->
+        <section class="about-links">
+            <p>ABOUT</p>
+            <a href="#">About us</a>
+            <a href="#">Status</a>
+            <a href="#">Help and support</a>
+            <a href="#">Frequently Asked Questions</a>
+        </section>
+
+        <!-- MORE INFORMATION LINKS -->
+        <section class="info-links">
+            <p>MORE INFORMATION</p>
+            <a href="#">How it works</a>
+            <a href="#">Pircing</a>
+            <a href="#">Contact us</a>
+            <a href="#">Community</a>
+        </section>
+
+        <!-- DISCOVER LINKS -->
+        <section class="discover-links">
+            <p>DISCOVER</p>
+            <a href="#">Current projects</a>
+            <a href="#">Results</a>
+            <a href="#">Alternatives</a>
+            <a href="#">Our history</a>
+        </section>
+
+        <section class="footerDetail">
+            <p>DESIGNED BY</p>
+            <a href="https://github.com/4Heber"><i class="fab fa-github"></i> Heber Martín Rodriguez Cabrera</a>
+            <p>&copy; 2022</p>
         </section>
     </footer>
 </div>
-
-<!-- SCRIPTS -->
-<script src="./js/index.js"></script>
 </body>
 </html>
