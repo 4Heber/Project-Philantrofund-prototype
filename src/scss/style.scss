@@ -259,14 +259,14 @@ header{
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                transform: scale(2,2.5);
             }
 
             :nth-child(1){
-                transform: translateY(-7rem);
                 z-index: -100;
             }
             :nth-child(2){
-                transform: translateY(-4rem);
+                z-index: -100;
             }
             :nth-child(9){
                 height: 35px;
@@ -397,6 +397,7 @@ header{
 
             a i{
                 font-size: 2rem;
+                color: $primary-variant;
             }
         }
     }
@@ -444,7 +445,7 @@ main{
 .fundrising-steps{
     grid-column: 1/7;
     width: 100%;
-    padding-top: 6rem;
+    padding-top: 4rem;
 
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -457,6 +458,7 @@ main{
         font-size: $h2-size;
         color: $primary-dark;
         text-align: center;
+        margin-bottom: 2rem;
     }
 
     figure{
@@ -539,7 +541,7 @@ main{
         font-family: $h2-font;
         color: $primary-dark;
         text-align: center;
-        margin-bottom: 2rem;
+        margin: 1rem 0 3rem 0;
     }
 
     .card-box{
@@ -718,7 +720,7 @@ main{
         font-family: $h2-font;
         color: $primary-dark;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .category-box{

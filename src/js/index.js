@@ -5,8 +5,8 @@ const h1Hero = document.getElementsByClassName('title-container');
 const svgHero = document.getElementsByClassName('illustration-box');
 const searchBar = document.getElementsByClassName('search-container');
 
-// Menu button on click animations
-menuBttn.addEventListener('click', () => {
+
+function displayAsideMenu(){
 
     // Change menu form cross-burger
     menuBttn.classList.toggle('changeMenuForm');
@@ -21,7 +21,12 @@ menuBttn.addEventListener('click', () => {
     // Change search-bar form
     searchBar[0].classList.toggle('search-menu-active');
 
-})
+}
+// Menu button on click animations
+menuBttn.addEventListener('click', displayAsideMenu); 
+
+// Searchbar onclick display aside menu
+searchBar[0].addEventListener('click', displayAsideMenu); 
 
 
 // Main title with Typed.js animation
@@ -40,6 +45,22 @@ var typed = new Typed('.typed',{
     cursorChar: '|',
     contetType: 'html'
 });
+
+
+// Waves svg with parallax scroll effect
+window.addEventListener('scroll', (e) => {
+
+    const target = document.querySelectorAll('.wave');
+
+    for(let i=0; i < target.length; i++){
+
+        if(window.scrollY < 258){
+            var position = window.scrollY * target[i].dataset.rate;
+
+            target[i].style.transform = 'translate3d(0px, '+ position +'px, 0px) scale(2,2.5)';
+        }
+    }
+})
 
 
 // Go top button function
