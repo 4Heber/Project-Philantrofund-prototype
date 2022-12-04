@@ -51,8 +51,11 @@ $shadow-bttn:
 0 12.5px 10px rgba(0, 0, 0, 0.06),
 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-0 100px 80px rgba(0, 0, 0, 0.12)
-;
+0 100px 80px rgba(0, 0, 0, 0.12);
+
+$shadow-card: 
+rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
 //Logotype
 @font-face{
@@ -449,8 +452,8 @@ main{
 
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
 
     h2{
         grid-column: 1/-1;
@@ -467,6 +470,7 @@ main{
         border-radius: 6px;
         overflow: hidden;
         background: linear-gradient(to bottom left, #c7c7c7, #fff);
+        box-shadow: $shadow-card;
 
         svg{
             position: relative;
@@ -552,7 +556,7 @@ main{
         margin-bottom: 2rem;
         overflow: hidden;
         background: linear-gradient(to bottom left, #c7c7c7, #fff);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: $shadow-card;
         transition: all ease-in 200ms;
         cursor: pointer;
         
@@ -635,8 +639,7 @@ main{
                     margin-bottom: 0.4rem;
 
                     .progress-bar{
-                        // Total progess 
-                        width: 80%;
+                        // Total progess width on JS script
                         height: 8px;
                         border-radius: 6px;
                         background-color: $primary;
@@ -670,26 +673,18 @@ main{
 .banner{
     grid-column: 1/7;
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    min-height: 193px;
     margin: 4rem 0 4rem;
-    height: 208px;
     overflow: hidden;
+    background: radial-gradient(farthest-corner at 40px 40px, $primary-dark 40%, $primary, $primary-variant);
     
-    .banner-bg{
-        position: relative;
-        width: 100%;
-        height: 100%;
-
-        background: url(../assets/images/banner/image-2.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        filter: blur(2px);
-    }
-
+    
     p{
-        position: absolute;
+        position: relative;
         width: 100%;
         padding: 1.5rem;
 
@@ -698,8 +693,6 @@ main{
         font-size: 2rem;
         text-align: center;
         color: #fff;
-        background: transparent;
-        z-index: 2;
     }
 }
 

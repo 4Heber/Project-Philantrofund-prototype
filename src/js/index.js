@@ -83,3 +83,15 @@ function goTopFunction(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+// Cards progress bar status
+const projectFundStatus = document.querySelectorAll('.funded');
+const cardProgressBar = document.querySelectorAll('.progress-bar');
+
+for(let i=0; i < projectFundStatus.length; i++){
+    
+    var fundProgress = (projectFundStatus[i].innerText).substring(0,2);
+    
+    cardProgressBar[i].style.width = fundProgress+'%';
+}
