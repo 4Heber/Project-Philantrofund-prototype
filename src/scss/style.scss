@@ -1,4 +1,5 @@
 // cd \Users\PARZIVAL\Documents\DAW-2\DIW - Diseño Interfaces Web\P2-Repository\Project-Philantrofund-prototype\src\
+
 // sass --watch ./scss/style.scss ./css/home.css
 
 *{
@@ -270,6 +271,10 @@ header{
                 bottom: 0;
                 transform: translateY(2rem);
             }
+
+            :last-child{
+                box-shadow: 0 4rem 3rem $primary;
+            }
         }
 
     }
@@ -329,6 +334,7 @@ header{
                 // Actual view active link
                 :nth-child(1) a{
                     color: $primary-variant;
+                    text-decoration: underline;
                 }
                 
                 li a{
@@ -448,18 +454,19 @@ main{
 .fundrising-steps{
     grid-column: 1/7;
     width: 100%;
-    padding-top: 4rem;
 
     display: grid;
     grid-template-columns: repeat(4,1fr);
     column-gap: 2rem;
     row-gap: 2rem;
 
+    transform: translateY(-1rem);
+
     h2{
         grid-column: 1/-1;
         font-family: $h2-font;
         font-size: $h2-size;
-        color: $primary-dark;
+        color: #fff;
         text-align: center;
         margin-bottom: 2rem;
     }
@@ -470,7 +477,7 @@ main{
         border-radius: 6px;
         overflow: hidden;
         background: linear-gradient(to bottom left, #c7c7c7, #fff);
-        box-shadow: $shadow-card;
+        // box-shadow: $shadow-card;
 
         svg{
             position: relative;
@@ -490,7 +497,8 @@ main{
 
         figcaption{
             position: relative;
-            text-align: justify;
+            // text-align: justify;
+            text-align: start;
             font-weight: 800;
             color: $primary-dark;
             z-index: 1;

@@ -10,10 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
-  --t-value: 100% ;
-}
-
 @font-face {
   font-family: Black-sword;
   src: url(../assets/fonts/Blacksword.otf);
@@ -192,6 +188,9 @@ header .big-hero-container .waves-box :nth-child(9) {
   bottom: 0;
   transform: translateY(2rem);
 }
+header .big-hero-container .waves-box :last-child {
+  box-shadow: 0 4rem 3rem #2e29a6;
+}
 header .hidden {
   opacity: 0;
 }
@@ -243,6 +242,7 @@ header .mobile-aside .nav-links ul {
 }
 header .mobile-aside .nav-links ul :nth-child(1) a {
   color: #986af9;
+  text-decoration: underline;
 }
 header .mobile-aside .nav-links ul li a {
   color: #ececec;
@@ -339,17 +339,17 @@ main {
 .fundrising-steps {
   grid-column: 1/7;
   width: 100%;
-  padding-top: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 2rem;
   row-gap: 2rem;
+  transform: translateY(-1rem);
 }
 .fundrising-steps h2 {
   grid-column: 1/-1;
   font-family: Calibri;
   font-size: 36px;
-  color: #0c0b26;
+  color: #fff;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -359,7 +359,6 @@ main {
   border-radius: 6px;
   overflow: hidden;
   background: linear-gradient(to bottom left, #c7c7c7, #fff);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .fundrising-steps figure svg {
   position: relative;
@@ -378,7 +377,7 @@ main {
 }
 .fundrising-steps figure figcaption {
   position: relative;
-  text-align: justify;
+  text-align: start;
   font-weight: 800;
   color: #0c0b26;
   z-index: 1;
