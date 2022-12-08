@@ -253,8 +253,8 @@ header .categories-tags {
   row-gap: 1rem;
   width: 100%;
   padding: 0 1rem 1rem 1rem;
-  margin-bottom: 2.9rem;
   transition: all ease-in 200ms;
+  z-index: 100;
   background: transparent;
 }
 header .categories-tags h3 {
@@ -263,14 +263,14 @@ header .categories-tags h3 {
   font-family: Calibri;
   color: #fff;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 header .categories-tags .category-box {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-self: center;
-  width: 110px;
+  width: 120px;
   border-radius: 6px;
   font-size: 12px;
   text-decoration: none;
@@ -311,6 +311,7 @@ header .categories-tags :nth-child(16) {
 header .illustration-container {
   padding: 0 2rem;
   transition: all ease-in 200ms;
+  z-index: -1;
 }
 header .illustration-container svg {
   width: 100%;
@@ -365,7 +366,7 @@ main {
   flex-flow: row nowrap;
   height: 184px;
   border-radius: 6px;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   overflow: hidden;
   background: linear-gradient(to bottom left, #c7c7c7, #fff);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -425,8 +426,13 @@ main {
 .leading-projects .card-box .project-info .project-status {
   width: 100%;
 }
+.leading-projects .card-box .project-info .project-status .usr-img-box {
+  display: none;
+}
 .leading-projects .card-box .project-info .project-status h4 {
-  margin-bottom: 1rem;
+  font-family: Montserrat;
+  font-size: 12px;
+  padding-bottom: 2px;
 }
 .leading-projects .card-box .project-info .project-status .progress-bar-box {
   width: 100%;
@@ -455,6 +461,21 @@ main {
 .leading-projects .card-box .project-info .project-status .nums :nth-child(3),
 .leading-projects .card-box .project-info .project-status .nums :nth-child(6) {
   text-align: end;
+}
+.leading-projects .show-more-bttn {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  transform: translatey(-2rem);
+}
+.leading-projects .show-more-bttn p, .leading-projects .show-more-bttn i {
+  color: #2e29a6;
+}
+.leading-projects .show-more-bttn p {
+  padding-right: 1rem;
+  font-weight: 700;
 }
 
 footer {

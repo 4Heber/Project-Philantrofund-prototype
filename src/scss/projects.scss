@@ -1,3 +1,7 @@
+// cd \Users\PARZIVAL\Documents\DAW-2\DIW - Diseño Interfaces Web\P2-Repository\Project-Philantrofund-prototype\src\
+
+// sass --watch ./scss/projects.scss ./css/projects.css
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -24,7 +28,7 @@ $light-text: #ececec;
 $light-gray: #6d6d6d;
 
 //Typography
-$h1-size: 42px;
+$h1-size: 38px;
 $h1-font: Calibri;
 $h2-size: 36px;
 $h2-font: Calibri;
@@ -35,7 +39,7 @@ $body-txt-size: 14px;
 $body-txt-font: Montserrat;
 $body-txt-weight: 800;
 $details-txt-size: 12px;
-$details-txt-font: Calibri;
+$details-txt-font: Montserrat;
 
 //Shadows
 $shadow-bttn:
@@ -348,8 +352,8 @@ header{
         row-gap: 1rem;
         width: 100%;
         padding: 0 1rem 1rem 1rem;
-        margin-bottom: 2.9rem;
         transition: all ease-in 200ms;
+        z-index: 100;
     
         background: transparent;
         
@@ -359,7 +363,7 @@ header{
             font-family: $h2-font;
             color: #fff;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
     
         .category-box{
@@ -367,7 +371,7 @@ header{
             align-items: center;
             justify-content: center;
             justify-self: center;
-            width: 110px;
+            width: 120px;
             border-radius: 6px;
             font-size: 12px;
             text-decoration: none;
@@ -418,6 +422,7 @@ header{
     .illustration-container{
         padding: 0 2rem;
         transition: all ease-in 200ms;
+        z-index: -1;
 
         svg{
             width: 100%;
@@ -482,9 +487,9 @@ main{
         flex-flow: row nowrap;
         height: 184px;
         border-radius: 6px;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         overflow: hidden;
-        background: linear-gradient(to bottom left, #c7c7c7, #fff);
+        background: linear-gradient(to bottom left, #c7c7c7, #fafafa, #fff );
         box-shadow: $shadow-card;
         transition: all ease-in 200ms;
         cursor: pointer;
@@ -553,11 +558,14 @@ main{
                 width: 100%;
 
                 .usr-img-box{
-
+                    display: none;
                 }
 
+                // user name creator of project
                 h4{
-                    margin-bottom: 1rem;
+                    font-family: $details-txt-font;
+                    font-size: $details-txt-size;
+                    padding-bottom: 2px;
                 }
 
                 .progress-bar-box{
@@ -579,6 +587,10 @@ main{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     grid-template-rows: 2;
+                    
+                    p{
+                        // font-size: 12px;
+                    }
 
                     p[id]{
                         font-weight: 800;
@@ -596,6 +608,23 @@ main{
             }
         }
 
+    }
+
+    .show-more-bttn{
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+        align-items: center;
+        transform: translatey(-2rem);
+
+        p,i{
+            color: $primary;
+        }
+        p{
+            padding-right: 1rem;
+            font-weight: 700;
+        }
     }
 }
 

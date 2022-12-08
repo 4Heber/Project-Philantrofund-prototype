@@ -258,10 +258,20 @@ main {
   display: grid;
   padding: 2rem 1rem;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: min-content;
+  height: calc(100vh - 90px);
+  background-color: #fff;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #fff 20%, #fff 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#f7f7f7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #f7f7f7 2px, #fff 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
 .hidden {
   opacity: 0;
+}
+
+.hidden-none {
+  display: none;
 }
 
 .expand {
@@ -271,7 +281,7 @@ main {
 .breadcrumb-container {
   grid-column: 1/-1;
   padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: all ease-in 200ms;
 }
 .breadcrumb-container .breadcrumb {
@@ -301,9 +311,9 @@ main {
   font-size: 36px;
   font-family: Calibri;
   color: #0c0b26;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
-.content .stepIndicator {
+.content #stepIndicator {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -312,47 +322,66 @@ main {
   list-style: none;
   margin-bottom: 2rem;
 }
-.content .stepIndicator li {
+.content #stepIndicator li {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #0c0b26;
   height: 1.5rem;
   width: 1.5rem;
-  background-color: #6d6d6d;
+  background-color: #fff;
+  border: 2px solid #0c0b26;
   border-radius: 50%;
   z-index: 100;
+  transition: all ease-in 250ms;
 }
-.content .stepIndicator .line {
+.content #stepIndicator .line {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #6d6d6d;
+  background-color: #0c0b26;
   top: 0.8rem;
   z-index: 0;
 }
-.content .step-1 h3 {
+.content #stepIndicator :nth-child(1) {
+  background-color: #986af9;
+}
+.content #stepContent-1,
+.content #stepContent-2,
+.content #stepContent-3 {
+  transition: all ease-in 200ms;
+}
+.content #stepContent-1 h3,
+.content #stepContent-2 h3,
+.content #stepContent-3 h3 {
   font-size: 24px;
   font-family: Montserrat;
   color: #0c0b26;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
-.content .step-1 p, .content .step-1 label {
+.content #stepContent-1 p,
+.content #stepContent-2 p,
+.content #stepContent-3 p {
   font-size: 14px;
   font-family: Montserrat;
   color: #0c0b26;
 }
-.content .step-1 .categories-tags {
+.content #stepContent-1 label {
+  font-size: 14px;
+  font-family: Montserrat;
+  color: #0c0b26;
+}
+.content #stepContent-1 .categories-tags {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1rem;
   row-gap: 1rem;
   width: 100%;
-  padding: 0 1rem 1rem 1rem;
+  padding-bottom: 2rem;
   transition: all ease-in 200ms;
   background: transparent;
 }
-.content .step-1 .categories-tags .category-box {
+.content #stepContent-1 .categories-tags .category-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,43 +392,43 @@ main {
   text-decoration: none;
   padding: 6px;
   color: #0c0b26;
-  background: linear-gradient(to bottom left, #c7c7c7, #fdfdfd);
+  background: linear-gradient(to bottom left, #c7c7c7, #fafafa, #fff);
   box-shadow: rgba(50, 50, 93, 0.25) 4px 13px 27px -5px, rgba(0, 0, 0, 0.3) 4px 8px 16px -8px;
 }
-.content .step-1 .categories-tags .category-box i {
+.content #stepContent-1 .categories-tags .category-box i {
   margin-right: 4px;
   color: #2e29a6;
 }
-.content .step-1 .categories-tags :nth-child(2),
-.content .step-1 .categories-tags :nth-child(7),
-.content .step-1 .categories-tags :nth-child(12) {
+.content #stepContent-1 .categories-tags :nth-child(2),
+.content #stepContent-1 .categories-tags :nth-child(7),
+.content #stepContent-1 .categories-tags :nth-child(12) {
   grid-column: 1/3;
 }
-.content .step-1 .categories-tags :nth-child(3),
-.content .step-1 .categories-tags :nth-child(8),
-.content .step-1 .categories-tags :nth-child(13) {
+.content #stepContent-1 .categories-tags :nth-child(3),
+.content #stepContent-1 .categories-tags :nth-child(8),
+.content #stepContent-1 .categories-tags :nth-child(13) {
   grid-column: 3/5;
 }
-.content .step-1 .categories-tags :nth-child(4),
-.content .step-1 .categories-tags :nth-child(9),
-.content .step-1 .categories-tags :nth-child(14) {
+.content #stepContent-1 .categories-tags :nth-child(4),
+.content #stepContent-1 .categories-tags :nth-child(9),
+.content #stepContent-1 .categories-tags :nth-child(14) {
   grid-column: 5/7;
 }
-.content .step-1 .categories-tags :nth-child(5),
-.content .step-1 .categories-tags :nth-child(10),
-.content .step-1 .categories-tags :nth-child(15) {
+.content #stepContent-1 .categories-tags :nth-child(5),
+.content #stepContent-1 .categories-tags :nth-child(10),
+.content #stepContent-1 .categories-tags :nth-child(15) {
   grid-column: 2/4;
 }
-.content .step-1 .categories-tags :nth-child(6),
-.content .step-1 .categories-tags :nth-child(11),
-.content .step-1 .categories-tags :nth-child(16) {
+.content #stepContent-1 .categories-tags :nth-child(6),
+.content #stepContent-1 .categories-tags :nth-child(11),
+.content #stepContent-1 .categories-tags :nth-child(16) {
   grid-column: 4/6;
 }
-.content .step-1 label {
+.content #stepContent-1 label {
   display: block;
   margin-bottom: 1rem;
 }
-.content .step-1 select {
+.content #stepContent-1 select {
   width: 100%;
   padding: 6px;
   border: 2px solid #2e29a6;
@@ -407,27 +436,286 @@ main {
   margin-bottom: 1rem;
   transition: all ease-in 150ms;
 }
-.content .step-1 select:active {
+.content #stepContent-1 select:active {
   border-color: #986af9;
 }
-.content .back-continue {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+.content #stepContent-2 {
+  position: relative;
+}
+.content #stepContent-2 p {
   margin-bottom: 2rem;
 }
-.content .back-continue .arrow-back,
-.content .back-continue .continue {
-  padding: 6px;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+.content #stepContent-2 .radioWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
-.content .back-continue .arrow-back {
-  width: 31px;
+.content #stepContent-2 .radioWrapper .container {
+  position: relative;
+  padding: 1rem 0 1rem 4rem;
+  margin-bottom: 1rem;
+  border: 2px solid #0c0b26;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+.content #stepContent-2 .radioWrapper .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.content #stepContent-2 .radioWrapper .container .checkmark {
+  position: absolute;
+  top: 14px;
+  left: 1rem;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.content #stepContent-2 .radioWrapper .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.content #stepContent-2 .radioWrapper .container input:checked ~ .checkmark {
+  background-color: #2e29a6;
+}
+.content #stepContent-2 .radioWrapper .container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.content #stepContent-2 .radioWrapper .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.content #stepContent-2 .radioWrapper .container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: white;
+}
+.content #stepContent-2 .projectDescription {
+  margin-bottom: 2rem;
+}
+.content #stepContent-2 .projectDescription p {
+  margin-bottom: 1rem;
+}
+.content #stepContent-2 .projectDescription textarea {
+  width: 100%;
+  height: 6rem;
   border: 2px solid #0c0b26;
   border-radius: 6px;
 }
-.content .back-continue .continue {
+.content #stepContent-2 .moneyGoal {
+  position: relative;
+  width: 100%;
+}
+.content #stepContent-2 .moneyGoal #goalInput {
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  border: 2px solid #0c0b26;
+  border-radius: 6px;
+  -moz-appearance: textfield;
+}
+.content #stepContent-2 .moneyGoal label {
+  position: absolute;
+  right: 1rem;
+  bottom: 10px;
+  font-weight: 800;
+  color: #2e29a6;
+}
+.content #stepContent-3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.content #stepContent-3 p {
+  margin-bottom: 1rem;
+}
+.content #stepContent-3 .emailWrapper {
+  position: relative;
+  width: 100%;
+}
+.content #stepContent-3 .emailWrapper .container {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.content #stepContent-3 .emailWrapper .container input, .content #stepContent-3 .emailWrapper .container span {
+  height: 3rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+.content #stepContent-3 .emailWrapper .container input {
+  width: 80%;
+  border: 2px solid #0c0b26;
+}
+.content #stepContent-3 .emailWrapper .container span {
+  width: 15%;
+  border: none;
+  background-color: #986af9;
+  color: #fff;
+  cursor: pointer;
+}
+.content #stepContent-3 .emailWrapper .emailTagsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  max-height: 146px;
+  overflow-y: scroll;
+}
+.content #stepContent-3 .emailWrapper .emailTagsContainer .emailTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 4px;
+  margin: 0 2px 8px 0;
+  border-radius: 10px;
+  background-color: #ececec;
+}
+.content #stepContent-3 .emailWrapper .emailTagsContainer .emailTag p {
+  font-size: 13px;
+  color: #0c0b26;
+  margin-right: 6px;
+  margin-bottom: 0;
+}
+.content #stepContent-3 .emailWrapper .emailTagsContainer .emailTag i {
+  color: #8b0020;
+  cursor: pointer;
+}
+.content #stepContent-3 .sendBttnCheck {
+  width: 100%;
+  margin-top: 2rem;
+}
+.content #stepContent-3 .sendBttnCheck #sendEmailBttn {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #986af9;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.content #stepContent-3 .sendBttnCheck .checkOptionalEmail {
+  cursor: pointer;
+}
+.content #stepContent-4 {
+  position: relative;
+  width: 100%;
+}
+.content #stepContent-4 h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  color: #0c0b26;
+  margin-bottom: 1rem;
+}
+.content #stepContent-4 p {
+  margin-bottom: 2rem;
+  color: #0c0b26;
+}
+.content #stepContent-4 .illustrationWrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.content #stepContent-4 .checkboxProposal {
+  color: #0c0b26;
+  font-weight: 800;
+}
+.content #stepContent-5 {
+  position: relative;
+  width: 100%;
+}
+.content #stepContent-5 h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  color: #0c0b26;
+  margin-bottom: 1rem;
+}
+.content #stepContent-5 p {
+  margin-bottom: 2rem;
+  color: #0c0b26;
+}
+.content #stepContent-5 .social-media-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.content #stepContent-5 .social-media-icons .mediaPlatform {
+  padding: 1rem;
+}
+.content #stepContent-5 .social-media-icons .mediaPlatform i, .content #stepContent-5 .social-media-icons .mediaPlatform span {
+  font-size: 1.5rem;
+}
+.content #stepContent-6 {
+  position: relative;
+  width: 100%;
+}
+.content #stepContent-6 h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  color: #0c0b26;
+  margin-bottom: 1rem;
+}
+.content #stepContent-6 p {
+  margin-bottom: 2rem;
+  color: #0c0b26;
+}
+.content #stepContent-6 .bankAcc {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.content #stepContent-6 .bankAcc #bankAccNum {
+  width: 100%;
+  height: 3rem;
+  padding: 10px;
+  border: 2px solid #0c0b26;
+  border-radius: 6px;
+  -moz-appearance: textfield;
+}
+.content #stepContent-6 .bankAcc i {
+  position: absolute;
+  top: 4px;
+  right: 1rem;
+}
+.content #stepContent-6 .checkWrapper {
+  margin-top: 2rem;
+}
+.content .back-continue {
+  position: absolute;
+  bottom: 8rem;
+  right: 2rem;
+  left: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.content .back-continue #backBttn,
+.content .back-continue #continueBttn {
+  padding: 6px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  cursor: pointer;
+}
+.content .back-continue #backBttn {
+  width: 31px;
+  border: 2px solid #2e29a6;
+  border-radius: 6px;
+}
+.content .back-continue #backBttn i {
+  color: #2e29a6;
+}
+.content .back-continue #continueBttn {
   grid-column: 2/-1;
   justify-self: flex-end;
   border: none;
@@ -438,8 +726,24 @@ main {
   height: 31px;
   transition: all ease-in 150ms;
 }
-.content .back-continue .continue:active {
+.content .back-continue #continueBttn:active {
   background-color: #986af9;
+}
+.content .back-continue #step6SendBttn {
+  grid-column: 2/-1;
+  justify-self: flex-end;
+  border: none;
+  background-color: #0bd9d9;
+  color: #0c0b26;
+  border-radius: 6px;
+  width: 8rem;
+  height: 31px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all ease-in 150ms;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 footer {
@@ -451,6 +755,7 @@ footer {
   row-gap: 1rem;
   width: 100vw;
   padding: 1rem 2rem 0 2rem;
+  z-index: 1;
 }
 footer a {
   color: #0c0b26;
