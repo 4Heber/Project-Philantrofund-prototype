@@ -50,11 +50,15 @@ Es decir, hay que priorizar aquellos contenidos y/o funcionalidades que son impr
 
 <br/>
 
+## ⛏️ Built Using <a name = "built_using"></a>
 
-
-
-
-
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207021773-9fd5421d-8ac0-452a-bb1d-b5a38325aebc.png" /> HTML
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207022218-5ce26a07-966c-458a-8c89-f033c0db815e.png" /> CSS
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207022492-5268d304-2c4f-463b-b1a5-47c1589b739e.png" /> SASS
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207022282-bea2e790-e029-4f17-949a-d528068bf544.png" /> JS
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207022282-bea2e790-e029-4f17-949a-d528068bf544.png" /> Typed.js - Landing-page cursor animation
+- <img width="20px" height="20px" src="https://user-images.githubusercontent.com/77643882/207022372-4bff0b26-4f51-4eb6-9032-5d661ed108a0.png" /> Google fonts - Specific fonts
+- <img width="20px" height="20px" color="white" src="https://user-images.githubusercontent.com/77643882/207022393-4d0c066f-51e6-41f9-8db2-e3e6e1a3313b.svg" /> Font awesome - Icons
 
 
 
