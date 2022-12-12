@@ -19,6 +19,22 @@ Para organizar el desarrollo y hacer un seguimiento detallado del progreso se ha
 
 #### <a href="https://trello.com/invite/b/bW2fi70H/ATTI17468c1b33fe79a304b0fb0d142a97ff7F0A6277/diw-p2-prototype">Enlace al tablero</a>
 
+## 🎨 Guía de estilo - Paleta de colores
+
+<img src="https://user-images.githubusercontent.com/77643882/198905635-d61a0d2d-f066-4248-8de8-227aa0f58e68.png" alt="Paleta-colores" width="60%" />
+
+**Muestra - 01**
+
+<img src="https://user-images.githubusercontent.com/77643882/198906065-e69f8f79-4867-4f21-9ba5-5f9289dd48d8.png" alt="Ejemplo-1" width="60%" />
+
+**Muestra - 02 & 03**
+
+<img src="https://user-images.githubusercontent.com/77643882/198906341-d6e81c72-31fe-4daf-8004-3611297b1a70.png" alt="Ejemplo-3" width="30%" /> <img src="https://user-images.githubusercontent.com/77643882/198906222-34a4ac48-70a6-408e-b4d8-2e033ebffdee.png" alt="Ejemplo-2" width="30%" />
+
+## ✒ Guía de estilo - Tipografía
+
+<img src="https://user-images.githubusercontent.com/77643882/198907458-0c4e2770-dba4-4cc2-b5c5-b2769e5b8fe8.png" alt="Tipografía" width="300" />
+
 ## 📱 El diseño orientado a 'Mobile first'
 
 Mobile First es una filosofía o estrategia que se basa en un objetivo claro: el móvil tiene que ser el primer dispositivo que se a de tener en cuenta a la hora de diseñar una página web.<br/>
