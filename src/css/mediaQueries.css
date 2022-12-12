@@ -1,0 +1,82 @@
+
+/* Media queries breakpoints for responsive design.
+    Source: https://stackdiary.com/css-media-queries/#ftoc-heading-1
+
+
+    Using min-width
+
+    // Medium devices ( tablets, 768px and up )
+    @media (min-width: 768px){ ... }
+
+    // Large devices ( desktops, 1200px and up )
+    @media (min-width: 1200px){ ... }
+
+*/
+
+@media (min-width: 768px){
+
+    /* Font size 14px to 16px for rem units on the views */
+    *{ font-size: 16px; }
+
+    /* Increase lateral paddings */
+    header nav{ padding: 2rem 4rem 4rem; }
+
+    /* Text align to center */
+    .big-hero-container .title-container{
+        margin: 0 2rem 2rem 2rem;
+        text-align: center;
+    }
+
+    /* reduce illustration width */
+    header .big-hero-container .illustration-box{ padding: 0 8rem; }
+
+    /* reduce mobile aside menu width */
+    header .mobile-aside{ padding: 0 10rem; }
+
+    /* reduce height of social media icons */
+    header .mobile-aside .social-media{ margin-top: 2rem; }
+
+    /* Increase goTopButton size */
+    #goTopBttn{ width: 40px; height: 40px; }
+
+    /* Add more lateral padding to main content */
+    main{ padding: 0 4rem; }
+
+    /* Increase cards padding */
+    .fundrising-steps figure{ padding: 1.5rem; }
+
+    /* Move background number of cards */
+    .fundrising-steps figure p{ top: 10rem; left: -1rem; }
+
+    /* Add margin top to card description */
+    .fundrising-steps figure figcaption{ margin-top: 1rem; }
+
+    /* Flex direction to column */
+    .leading-projects .card-box{ 
+        flex-flow: column nowrap;
+        height: auto;
+        /* Figma cards design units for tablet/desktop */
+        width: 280px;
+        height: 490px;
+    }
+
+    /* Increase image to 100% width */
+    .leading-projects .card-box .image-tags{ width: 100%; margin-right: 0; }
+
+
+    .leading-projects .card-box .project-info{ 
+        width: 100%;
+        padding: 1rem;
+        height: 100%;
+        justify-content: unset;
+    }
+
+    .leading-projects .card-box .project-info .description{
+        width: 100%;
+        height: 164px;
+        max-height: 164px;
+        white-space: unset;
+    }
+
+    .leading-projects .card-box .project-info .project-status{  }
+}
