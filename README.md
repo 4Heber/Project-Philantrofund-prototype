@@ -3,7 +3,8 @@
   <h1 align="center"> DIW - Diseño Interfaces Web Práctica 2 </h1>
 </p>
 
-### Prototipo creado en base al wireframe desarrollado en Práctica 1 ( https://github.com/4Heber/DIW-Wireframe )
+### Prototipo creado en base al wireframe desarrollado en Práctica 1
+### ( https://github.com/4Heber/DIW-Wireframe )
 
 <div align="center">
 
